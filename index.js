@@ -23,6 +23,10 @@ app.get('/v1/cursed', (req, res) => {
   res.json({ success: true, text: parsedText.join('') })
 })
 
+app.get('/v1/list', (req, res) => {
+  res.json([{ name: '멈뭄미' }, { name: '엉엉이' }, { name: '헣헣히' }, { name: '섯섯시' }, { name: '법붑비' }])
+})
+
 const port = 8011
 app.listen(port, () => {
   console.log(`server is running on port : ${port}`)
