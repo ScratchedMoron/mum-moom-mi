@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "lint": "standard",
     "dev": "nodemon index.js"
   },
   "repository": {
@@ -20,9 +21,11 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "hangul-js": "^0.2.6"
+    "hangul-js": "^0.2.6",
+    "helmet": "^3.21.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "standard": "^14.3.1"
   }
 }
