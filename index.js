@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/index.html'))
 })
 
-app.get('/v1/cursed', (req, res) => {
+app.post('/v1/cursed', (req, res) => {
   const { body: { type = '멈뭄미', text, user } } = req
 
   const { char: cursedChar } = CURSED_TYPES.find(e => e.name === type)
@@ -50,7 +50,7 @@ app.get('/v1/list', (req, res) => {
   res.json(CURSED_TYPES)
 })
 
-const port = 8011
+const port = 8012
 app.listen(port, () => {
   console.log(`server is running on port : ${port}`)
 })
