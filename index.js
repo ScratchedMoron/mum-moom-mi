@@ -1,24 +1,20 @@
 const Hangul = require('hangul-js')
 const express = require('express')
 const helmet = require('helmet')
-const path = require('path')
 const app = express()
 
 const CURSED_TYPES = [
-  { name: '멈뭄미', char: 'ㅁ' },
-  { name: '엉엉이', char: 'ㅇ' },
-  { name: '헣헣히', char: 'ㅎ' },
-  { name: '섯섯시', char: 'ㅅ' },
-  { name: '법붑비', char: 'ㅂ' }
+  { name: '멈뭄미', char: 'ㅁ', src: 'http://mmm.nigga.shop/images/mmm.jpg' },
+  { name: '엉엉이', char: 'ㅇ', src: 'http://mmm.nigga.shop/images/ooo.png' },
+  { name: '헣헣히', char: 'ㅎ', src: 'http://mmm.nigga.shop/images/hhh.jpg' },
+  { name: '섯섯시', char: 'ㅅ', src: 'http://mmm.nigga.shop/images/sss.jpg' },
+  { name: '법붑비', char: 'ㅂ', src: 'http://mmm.nigga.shop/images/bbb.png' }
 ]
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(helmet())
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public/index.html'))
-})
+app.use(express.static('public'))
 
 app.post('/v1/cursed', (req, res) => {
   const { body: { type = '멈뭄미', text, user } } = req
@@ -50,7 +46,7 @@ app.get('/v1/list', (req, res) => {
   res.json(CURSED_TYPES)
 })
 
-const port = 8012
+const port = 8000
 app.listen(port, () => {
   console.log(`server is running on port : ${port}`)
 })
