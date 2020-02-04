@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(helmet())
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/index.html'))
+  res.sendFile(path.join(__dirname, '/public/index.html'))
 })
 
 app.post('/v1/cursed', (req, res) => {
