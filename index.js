@@ -4,11 +4,11 @@ const helmet = require('helmet')
 const app = express()
 
 const CURSED_TYPES = [
-  { name: '멈뭄미', char: 'ㅁ', src: 'http://mmm.nigga.shop/images/mmm.jpg' },
-  { name: '엉엉이', char: 'ㅇ', src: 'http://mmm.nigga.shop/images/ooo.png' },
-  { name: '헣헣히', char: 'ㅎ', src: 'http://mmm.nigga.shop/images/hhh.jpg' },
-  { name: '섯섯시', char: 'ㅅ', src: 'http://mmm.nigga.shop/images/sss.jpg' },
-  { name: '법붑비', char: 'ㅂ', src: 'http://mmm.nigga.shop/images/bbb.png' }
+  { name: '멈뭄미', char: 'ㅁ', src: 'http://mmm.zifori.me/images/mmm.jpg' },
+  { name: '엉엉이', char: 'ㅇ', src: 'http://mmm.zifori.me/images/ooo.png' },
+  { name: '헣헣히', char: 'ㅎ', src: 'http://mmm.zifori.me/images/hhh.jpg' },
+  { name: '섯섯시', char: 'ㅅ', src: 'http://mmm.zifori.me/images/sss.jpg' },
+  { name: '법붑비', char: 'ㅂ', src: 'http://mmm.zifori.me/images/bbb.png' }
 ]
 
 app.use(express.json())
