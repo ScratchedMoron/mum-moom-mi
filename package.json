@@ -1,23 +1,9 @@
 {
-  "name": "mum-moom-mi",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "lint": "standard",
     "dev": "nodemon index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hotsoycandy/mum-moom-mi.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hotsoycandy/mum-moom-mi/issues"
-  },
-  "homepage": "https://github.com/hotsoycandy/mum-moom-mi#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -27,5 +13,10 @@
   "devDependencies": {
     "nodemon": "^2.0.2",
     "standard": "^14.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hotsoycandy/mum-moom-mi.git"
+  },
+  "license": "ISC"
 }

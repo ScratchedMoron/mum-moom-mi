@@ -1,12 +1,11 @@
 FROM node:10
 
-WORKDIR /usr/src/app
+WORKDIR /var/app
 
 COPY . .
 
-RUN npm install
+RUN yarn install
 
-EXPOSE 8012
+EXPOSE 8000
 
-CMD [ "node", "index.js" ]
-
+CMD [ "yarn", "start" ]
